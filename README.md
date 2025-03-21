@@ -57,5 +57,27 @@ Milestone ini membuat saya lebih memahami pentingnya concurrency dalam membangun
 #### Page saat Sleep
 ![Commit 4 screen capture](gambar\commit4(1).png)
 
-#### Error Page
+#### Page normal
 ![Commit 4 screen capture](gambar\commit4(2).png)
+
+## Commit 5 Reflection Notes
+Pada milestone ini, saya belajar membuat web server multithreaded di Rust dengan pendekatan thread pool. Perbedaannya dengan versi single-threaded:
+
+- Enum Message:
+    Saya menambahkan enum untuk membedakan job baru (NewJob(Job)) dan perintah Terminate. Ketika ThreadPool di-drop, saya mengirimkan Message::Terminate ke semua worker agar mereka menghentikan loop-nya.
+
+- Memanggil .join() di Drop:
+    Dengan memanggil .join() pada setiap worker, saya memastikan semua thread ditutup secara rapi. Ini juga menghilangkan pesan peringatan tentang field thread yang tidak digunakan, karena sekarang saya benar-benar “membaca” (menjalankan) JoinHandle-nya.
+
+- Concurrency Lebih Baik:
+    Sekarang, request lambat (misalnya /sleep) tidak memblokir request lain, karena ada beberapa thread siap bekerja paralel. Ini meningkatkan responsiveness server.
+
+Saya merasa milestone ini sangat membantu memahami cara kerja concurrency di Rust dan bagaimana Rust menangani ownership dan thread safety. Dengan adanya thread pool, server menjadi lebih efisien saat menangani banyak request secara bersamaan.
+
+### Gambar Commit 5
+
+#### Page banyak
+![Commit 4 screen capture](gambar\commit5(1).png)
+
+#### Page normal
+![Commit 4 screen capture](gambar\commit5(2).png)
