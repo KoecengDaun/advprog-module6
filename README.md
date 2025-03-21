@@ -21,3 +21,26 @@ Pada tahap ini, saya jadi lebih paham bahwa ketika browser meminta suatu halaman
 
 ### Gambar Commit 2
 ![Commit 2 screen capture](hello\gambar\commit2.png)
+
+## Commit 3 Reflection Notes
+Pada milestone ini, saya belajar cara memvalidasi request dari browser dan menampilkan halaman berbeda tergantung URL yang diakses. Saya membuat file 404.html untuk menampilkan pesan apabila browser meminta path yang tidak ada. Prosesnya seperti ini:
+
+- Membaca Baris Pertama Request
+    Saya ambil baris pertama (misalnya "GET / HTTP/1.1") dan memeriksa apakah path yang diminta adalah / atau bukan.
+
+- Menentukan Respon
+    - Jika baris pertama adalah "GET / HTTP/1.1", saya mengirimkan file hello.html dengan status 200 OK.
+    - Jika bukan, saya mengirimkan file 404.html dengan status 404 NOT FOUND.
+
+- Memahami Struktur HTTP
+    Saya makin paham cara kerja protokol HTTP di sisi server, bahwa setiap request bisa di-split ke dalam baris-baris, dan baris pertama umumnya berisi metode (GET/POST), path (misalnya /), dan versi protokol (HTTP/1.1).
+
+Dengan demikian, server sederhana ini bisa menampilkan konten berbeda sesuai path yang diakses.
+
+### Gambar Commit 3
+
+#### Main Page
+![Commit 3 screen capture](hello\gambar\commit3(1).png)
+
+#### Error Page
+![Commit 3 screen capture](hello\gambar\commit3(2).png)
