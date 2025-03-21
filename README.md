@@ -20,7 +20,7 @@ Pada milestone ini, saya belajar bagaimana cara mengirimkan file HTML sebagai re
 Pada tahap ini, saya jadi lebih paham bahwa ketika browser meminta suatu halaman, server perlu mengirimkan status line, header, dan body dalam format yang sesuai protokol HTTP. Dengan begitu, browser bisa menampilkan konten HTML dengan benar. Meskipun masih sederhana, ini sudah menunjukkan alur dasar bagaimana sebuah web server menyiapkan halaman untuk peng
 
 ### Gambar Commit 2
-![Commit 2 screen capture](gambar\commit2.png)
+![Commit 2 screen capture](gambar/commit2.png)
 
 ## Commit 3 Reflection Notes
 Pada milestone ini, saya belajar cara memvalidasi request dari browser dan menampilkan halaman berbeda tergantung URL yang diakses. Saya membuat file 404.html untuk menampilkan pesan apabila browser meminta path yang tidak ada. Prosesnya seperti ini:
@@ -40,10 +40,10 @@ Dengan demikian, server sederhana ini bisa menampilkan konten berbeda sesuai pat
 ### Gambar Commit 3
 
 #### Main Page
-![Commit 3 screen capture](gambar\commit3(1).png)
+![Commit 3 screen capture](gambar/commit3(1).png)
 
 #### Error Page
-![Commit 3 screen capture](gambar\commit3(2).png)
+![Commit 3 screen capture](gambar/commit3(2).png)
 
 ## Commit 4 Reflection Notes
 Pada milestone ini, saya belajar bagaimana mensimulasikan slow response di web server dengan cara menambahkan thread::sleep(Duration::from_secs(10)) sebelum mengirimkan respon. Tujuannya adalah untuk melihat apa yang terjadi jika server memproses request yang lambat.
@@ -55,10 +55,10 @@ Milestone ini membuat saya lebih memahami pentingnya concurrency dalam membangun
 ### Gambar Commit 4
 
 #### Page saat Sleep
-![Commit 4 screen capture](gambar\commit4(1).png)
+![Commit 4 screen capture](gambar/commit4(1).png)
 
 #### Page normal
-![Commit 4 screen capture](gambar\commit4(2).png)
+![Commit 4 screen capture](gambar/commit4(2).png)
 
 ## Commit 5 Reflection Notes
 Pada milestone ini, saya belajar membuat web server multithreaded di Rust dengan pendekatan thread pool. Perbedaannya dengan versi single-threaded:
@@ -77,7 +77,7 @@ Saya merasa milestone ini sangat membantu memahami cara kerja concurrency di Rus
 ### Gambar Commit 5
 
 #### Page banyak
-![Commit 4 screen capture](gambar\commit5(1).png)
+![Commit 4 screen capture](gambar/commit5(1).png)
 
 #### Page normal
-![Commit 4 screen capture](gambar\commit5(2).png)
+![Commit 4 screen capture](gambar/commit5(2).png)
