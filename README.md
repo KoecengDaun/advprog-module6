@@ -44,3 +44,18 @@ Dengan demikian, server sederhana ini bisa menampilkan konten berbeda sesuai pat
 
 #### Error Page
 ![Commit 3 screen capture](hello\gambar\commit3(2).png)
+
+## Commit 4 Reflection Notes
+Pada milestone ini, saya belajar bagaimana mensimulasikan slow response di web server dengan cara menambahkan thread::sleep(Duration::from_secs(10)) sebelum mengirimkan respon. Tujuannya adalah untuk melihat apa yang terjadi jika server memproses request yang lambat.
+
+Saat saya mengakses http://127.0.0.1:7878/sleep, browser butuh waktu 10 detik untuk menerima respon. Jika saya membuka tab baru di browser dan mencoba mengakses http://127.0.0.1:7878/ pada saat bersamaan, request kedua juga menunggu request pertama selesai. Ini menunjukkan bahwa server masih berjalan dengan konsep single-threaded. Dengan demikian, satu request yang lambat akan memblokir request lainnya.
+
+Milestone ini membuat saya lebih memahami pentingnya concurrency dalam membangun server yang responsif.
+
+### Gambar Commit 4
+
+#### Page saat Sleep
+![Commit 4 screen capture](hello\gambar\commit4(1).png)
+
+#### Error Page
+![Commit 4 screen capture](hello\gambar\commit4(2).png)
